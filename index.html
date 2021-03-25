@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Heat-map</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <div class="wrap__iner">
+                <div class="cnt-canvas">
+                    <canvas id="canvas" width="400" height="400"></canvas>
+                </div>
+                
+                <div id="cnt-menu" class="cnt-menu" >  
+                    <div id="menu" class="menu">
+                        <ul>
+                            <li id="exportRNG" >Export as PNG</li>
+                            <li id="normalizedata">Normalize data</li>
+                            <li id="switchpallette">Switch pallette</li>
+                            <li id="information">Information</li>
+                        </ul>
+                    </div>                    
+                </div>
+
+                <div id="wrap__pallette" hidden>
+                    <div id="pallette">
+                        <ul>
+                            <li id="img1" data-value="rgb(0, 0, 0)"><img src="./image/black.png" alt=""></li>
+                            <li id="img2" data-value="rgb(15, 252, 245)"><img src="./image/blue-white.png" alt=""></li>
+                            <li id="img3" data-value="rgb(0, 0, 255)"><img src="./image/blue.png" alt=""></li>
+                        </ul>  
+                        <ul>
+                            <li id="img4" data-value="rgb(0, 255, 0)"><img src="./image/green.png" alt=""></li>
+                            <li id="img5" data-value="rgb(197, 58, 240)"><img src="./image/pink.png" alt=""></li>
+                            <li id="img6" data-value="rgb(227, 102, 0)"><img src="./image/orange.png" alt=""></li>
+                        </ul> 
+                        <ul>
+                            <li id="img7" data-value="rgb(84, 0, 163)"><img src="./image/purple.png" alt=""></li>
+                            <li id="img8" data-value="rgb(255, 0, 0)"><img src="./image/red.png" alt=""></li>
+                            <li id="img9" data-value="rgb(255, 230, 0)"><img src="./image/yellow.png" alt=""></li>
+                        </ul> 
+                    </div>
+
+                    <div id="user__pallette">
+                        <p>Pallette:</p> 
+                        
+                    </div>
+
+                    <div class="button__wrap">
+                        <button id="button__reset" >reset</button>
+                        <button id="button__save" data-status="false">save pallette</button>
+                    </div>
+                </div>   
+            </div>
+        </div>  
+        <div class="buttons">
+            <input type="file" id="button__select__file">
+            <button id='button__draw'>draw</button>
+        </div>
+    </div>
+
+    <canvas id="test_canvas" width="600" height="1200"></canvas>
+
+    
+    <script src="./heatmapfromdata.js"></script>
+    <script src="./index.js" > </script>
+</body>
+</html>
+
